@@ -4,7 +4,6 @@ def parse(path):
         for line in config.readlines():
             temp = line.split(' ')
             temp[3] = temp[3].strip('\n')
-            text = 'aqua'
             if temp[2] not in ['img', 'audio', 'video']:
                 text = open('src//{}//{}'.format(temp[2], temp[3])).read()
             else:
