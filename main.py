@@ -8,10 +8,7 @@ clients = []
 buf = None
 
 def send_task(client):
-    if client.get_text() == 'aqua':
-        bot.send_photo(client.chat_id, open('src/img/aqua1.jpg', 'rb').read())
-        bot.send_photo(client.chat_id, open('src/img/aqua2.jpg', 'rb').read())
-    elif client.get_type() == 'img':
+    if client.get_type() == 'img':
         bot.send_photo(client.chat_id, client.get_text())
     elif client.get_type() == 'audio':
         bot.send_audio(client.chat_id, client.get_text())
