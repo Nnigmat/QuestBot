@@ -3,7 +3,7 @@ import telebot
 from parser import parse
 from circular_buffer import Circular_Buffer
 
-bot = telebot.TeleBot('')
+bot = telebot.TeleBot('TOKEN')
 clients = []
 buf = None
 
